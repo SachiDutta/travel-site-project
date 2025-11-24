@@ -1,0 +1,184 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+
+/* Scoped background for login page only */
+.login-page {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease;
+}
+
+.logo .orange {
+  color: #ffcc00;
+}
+
+/* Card (glass effect with glow) */
+.forms-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 18px;
+  width: 420px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  animation: fadeInUp 1s ease;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px 12px 0 0;
+  transition: 0.3s;
+  color: #eee;
+}
+
+.tab.active {
+  background: #00aaff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,170,255,0.6);
+}
+
+/* Forms */
+.form {
+  display: none;
+  flex-direction: column;
+  animation: fadeIn 0.6s ease;
+}
+
+.form.active {
+  display: flex;
+}
+
+.form h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Inputs */
+.form input {
+  margin-bottom: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.form input::placeholder {
+  color: #eee;
+}
+
+.form input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 0 8px #00d4ff;
+}
+
+/* Buttons */
+.form button {
+  padding: 15px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,150,255,0.6);
+}
+
+/* Links */
+.forgot {
+  text-align: right;
+  display: block;
+  margin: 8px 0 15px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.switch-text a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* Auth message (success / error) */
+.auth-message {
+  margin: 12px 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+.auth-message.success { background: rgba(0,255,128,0.12); color: #b7ffd9; }
+.auth-message.error { background: rgba(255,0,64,0.08); color: #ffc7d0; }
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
